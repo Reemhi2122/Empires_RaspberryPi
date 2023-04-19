@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29721.120
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloCubes", "HelloCubes.vcxproj", "{7F2FE357-D184-4B88-8117-E2F1DE2262AA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shared", "..\Shared\Shared.vcxitems", "{ED766D81-5FCF-47B5-8370-7C10F2875E28}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Empires(Windows)", "..\Empires(Windows)\Empires(Windows).vcxproj", "{BDBE08A2-0131-41B5-A3F7-AB5B12DE8777}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\Shared\Shared.vcxitems*{7f2fe357-d184-4b88-8117-e2f1de2262aa}*SharedItemsImports = 4
+		..\Shared\Shared.vcxitems*{bdbe08a2-0131-41b5-a3f7-ab5b12de8777}*SharedItemsImports = 4
+		..\Shared\Shared.vcxitems*{ed766d81-5fcf-47b5-8370-7c10f2875e28}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F2FE357-D184-4B88-8117-E2F1DE2262AA}.Debug|ARM.ActiveCfg = Debug|ARM
+		{7F2FE357-D184-4B88-8117-E2F1DE2262AA}.Debug|ARM.Build.0 = Debug|ARM
+		{7F2FE357-D184-4B88-8117-E2F1DE2262AA}.Debug|ARM.Deploy.0 = Debug|ARM
+		{7F2FE357-D184-4B88-8117-E2F1DE2262AA}.Debug|x64.ActiveCfg = Debug|ARM
+		{7F2FE357-D184-4B88-8117-E2F1DE2262AA}.Release|ARM.ActiveCfg = Release|ARM
+		{7F2FE357-D184-4B88-8117-E2F1DE2262AA}.Release|ARM.Build.0 = Release|ARM
+		{7F2FE357-D184-4B88-8117-E2F1DE2262AA}.Release|ARM.Deploy.0 = Release|ARM
+		{7F2FE357-D184-4B88-8117-E2F1DE2262AA}.Release|x64.ActiveCfg = Release|ARM
+		{BDBE08A2-0131-41B5-A3F7-AB5B12DE8777}.Debug|ARM.ActiveCfg = Debug|x64
+		{BDBE08A2-0131-41B5-A3F7-AB5B12DE8777}.Debug|x64.ActiveCfg = Debug|x64
+		{BDBE08A2-0131-41B5-A3F7-AB5B12DE8777}.Debug|x64.Build.0 = Debug|x64
+		{BDBE08A2-0131-41B5-A3F7-AB5B12DE8777}.Release|ARM.ActiveCfg = Release|x64
+		{BDBE08A2-0131-41B5-A3F7-AB5B12DE8777}.Release|x64.ActiveCfg = Release|x64
+		{BDBE08A2-0131-41B5-A3F7-AB5B12DE8777}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A778674E-84C9-4E38-9E4B-2615F5FC655F}
+	EndGlobalSection
+EndGlobal

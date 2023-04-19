@@ -1,0 +1,1 @@
+Use team24libs.sh on the pi to get the required libs

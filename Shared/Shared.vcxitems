@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{ED766D81-5FCF-47B5-8370-7C10F2875E28}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\compute_common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\compute_vector_relational.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\qualifier.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\setup.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_float.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_half.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_mat2x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_mat2x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_mat2x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_mat3x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_mat3x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_mat3x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_mat4x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_mat4x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_mat4x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_quat.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_vec1.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_vec2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_vec3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\type_vec4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\_features.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\_fixes.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\_noise.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\_swizzle.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\_swizzle_func.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\detail\_vectorize.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\exponential.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_clip_space.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double2x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double2x2_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double2x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double2x3_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double2x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double2x4_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double3x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double3x2_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double3x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double3x3_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double3x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double3x4_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double4x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double4x2_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double4x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double4x3_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double4x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_double4x4_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float2x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float2x2_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float2x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float2x3_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float2x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float2x4_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float3x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float3x2_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float3x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float3x3_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float3x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float3x4_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float4x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float4x2_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float4x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float4x3_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float4x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_float4x4_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int2x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int2x2_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int2x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int2x3_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int2x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int2x4_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int3x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int3x2_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int3x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int3x3_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int3x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int3x4_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int4x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int4x2_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int4x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int4x3_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int4x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_int4x4_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_integer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_projection.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_relational.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_transform.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint2x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint2x2_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint2x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint2x3_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint2x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint2x4_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint3x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint3x2_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint3x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint3x3_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint3x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint3x4_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint4x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint4x2_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint4x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint4x3_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint4x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\matrix_uint4x4_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_double.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_double_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_exponential.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_float.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_float_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_geometric.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_relational.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_transform.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_trigonometric.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\scalar_common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\scalar_constants.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\scalar_integer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\scalar_int_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\scalar_packing.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\scalar_reciprocal.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\scalar_relational.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\scalar_uint_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\scalar_ulp.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_bool1.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_bool1_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_bool2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_bool2_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_bool3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_bool3_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_bool4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_bool4_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_double1.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_double1_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_double2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_double2_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_double3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_double3_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_double4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_double4_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_float1.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_float1_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_float2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_float2_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_float3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_float3_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_float4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_float4_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_int1.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_int1_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_int2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_int2_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_int3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_int3_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_int4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_int4_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_integer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_packing.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_reciprocal.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_relational.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_uint1.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_uint1_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_uint2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_uint2_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_uint3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_uint3_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_uint4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_uint4_sized.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\ext\vector_ulp.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\fwd.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\geometric.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\glm.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\bitfield.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\color_space.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\constants.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\epsilon.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\integer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\matrix_access.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\matrix_integer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\matrix_inverse.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\matrix_transform.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\noise.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\packing.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\quaternion.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\random.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\reciprocal.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\round.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\type_aligned.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\type_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\type_ptr.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\ulp.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtc\vec1.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\associated_min_max.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\bit.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\closest_point.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\color_encoding.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\color_space.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\color_space_YCoCg.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\compatibility.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\component_wise.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\dual_quaternion.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\easing.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\euler_angles.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\extend.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\extended_min_max.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\exterior_product.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\fast_exponential.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\fast_square_root.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\fast_trigonometry.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\functions.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\gradient_paint.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\handed_coordinate_space.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\hash.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\integer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\intersect.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\io.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\log_base.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_cross_product.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_decompose.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_factorisation.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_interpolation.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_major_storage.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_operation.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_query.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_transform_2d.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\mixed_product.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\norm.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\normal.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\normalize_dot.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\number_precision.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\optimum_pow.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\orthonormalize.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\perpendicular.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\polar_coordinates.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\projection.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\quaternion.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\range.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\raw_data.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\rotate_normalized_axis.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\rotate_vector.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\scalar_multiplication.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\scalar_relational.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\spline.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\std_based_type.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\string_cast.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\texture.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\transform.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\transform2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\type_aligned.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\type_trait.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\vector_angle.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\vector_query.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\vec_swizzle.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\gtx\wrap.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\integer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\mat2x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\mat2x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\mat2x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\mat3x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\mat3x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\mat3x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\mat4x2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\mat4x3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\mat4x4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\matrix.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\packing.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\common.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\exponential.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\geometric.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\integer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\matrix.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\neon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\packing.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\platform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\trigonometric.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\simd\vector_relational.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\trigonometric.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\vec2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\vec3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\vec4.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)glm\vector_relational.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Camera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Empire.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\EmpireAI.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\GLDebugDrawer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\materials\Material.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\modules\CubeModule.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\modules\DebugModule.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\modules\DiscModule.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\modules\GeometryModule.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\modules\InstanceModelModule.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\modules\ModelModule.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\modules\PyramidModule.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\MyFiles.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\ObjectModel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\objects\CarrierVessel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\objects\DebugModel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\objects\DiscoveryVessel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\objects\Model.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\objects\Planet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\objects\SOI.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\objects\SupplyVessel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\objects\Vessel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\OGLGraphics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\PhysicsObj.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\state_machines\MenuStateMachine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\state_machines\menu_states\EndGameMenuState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\state_machines\menu_states\GenerationState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\state_machines\menu_states\InGameMenuState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\state_machines\menu_states\MainMenuState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\state_machines\menu_states\MenuState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\stb_image.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\utilities\DataStorage.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\utilities\Generator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\utilities\Manager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\utilities\Renderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\utilities\Shader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\utilities\Timer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)IMGUI\backends\imgui_impl_glfw.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)IMGUI\backends\imgui_impl_opengl3.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)IMGUI\imconfig.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)IMGUI\imgui.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)IMGUI\imgui_internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)IMGUI\imstb_rectpack.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)IMGUI\imstb_textedit.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)IMGUI\imstb_truetype.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)TOL\tiny_obj_loader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)GLAD\src\glad.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)glm\detail\glm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)IMGUI\backends\imgui_impl_glfw.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)IMGUI\backends\imgui_impl_opengl3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)IMGUI\imgui.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)IMGUI\imgui_draw.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)IMGUI\imgui_tables.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)IMGUI\imgui_widgets.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Camera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Empire.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\EmpireAI.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\GlDebugDrawer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\materials\Material.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\modules\CubeModule.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\modules\DebugModule.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\modules\DiscModule.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\modules\GeometryModule.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\modules\InstanceModelModule.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\modules\ModelModule.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\modules\PyramidModule.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\MyFiles.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\ObjectModel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\objects\CarrierVessel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\objects\DebugModel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\objects\DiscoveryVessel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\objects\Model.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\objects\Planet.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\objects\SOI.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\objects\SupplyVessel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\objects\Vessel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\PhysicsObj.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\state_machines\menu_states\EndGameMenuState.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\state_machines\menu_states\GenerationState.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\state_machines\menu_states\InGameMenuState.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\state_machines\menu_states\MainMenuState.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\state_machines\menu_states\MenuState.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\state_machines\MenuStateMachine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\utilities\DataStorage.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\utilities\Generator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\utilities\Manager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\utilities\Renderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\utilities\Shader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\utilities\Timer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)TOL\tiny_obj_loader.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)Resources\Generators\syllables.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_02.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_02_em.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_03.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_03_em.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\MarsPlanet.jpg">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_01.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_01_em.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Resource>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Dice.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Harvey2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_common.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_common_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_exponential.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_exponential_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_geometric.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_geometric_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_integer.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_integer_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_matrix.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_matrix_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_packing.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_packing_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_trigonometric.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_trigonometric_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_vector_relational.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\func_vector_relational_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_half.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat2x2.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat2x3.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat2x4.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat3x2.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat3x3.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat3x4.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat4x2.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat4x3.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat4x4.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_mat4x4_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_quat.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_quat_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_vec1.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_vec2.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_vec3.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_vec4.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\detail\type_vec4_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\matrix_clip_space.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\matrix_common.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\matrix_integer.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\matrix_projection.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\matrix_relational.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\matrix_transform.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_common.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_common_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_exponential.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_geometric.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_relational.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_transform.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\quaternion_trigonometric.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\scalar_common.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\scalar_constants.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\scalar_integer.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\scalar_packing.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\scalar_reciprocal.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\scalar_relational.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\scalar_ulp.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\vector_common.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\vector_integer.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\vector_packing.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\vector_reciprocal.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\vector_relational.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\ext\vector_ulp.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\bitfield.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\color_space.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\constants.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\epsilon.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\integer.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\matrix_access.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\matrix_inverse.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\matrix_transform.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\noise.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\packing.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\quaternion.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\quaternion_simd.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\random.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\round.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\type_precision.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\type_ptr.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtc\ulp.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\associated_min_max.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\bit.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\closest_point.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\color_encoding.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\color_space.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\color_space_YCoCg.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\common.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\compatibility.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\component_wise.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\dual_quaternion.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\easing.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\euler_angles.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\extend.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\extended_min_max.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\exterior_product.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\fast_exponential.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\fast_square_root.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\fast_trigonometry.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\float_notmalize.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\functions.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\gradient_paint.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\handed_coordinate_space.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\hash.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\integer.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\intersect.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\io.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\log_base.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_cross_product.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_decompose.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_factorisation.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_interpolation.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_major_storage.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_operation.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_query.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\matrix_transform_2d.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\mixed_product.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\norm.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\normal.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\normalize_dot.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\number_precision.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\optimum_pow.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\orthonormalize.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\perpendicular.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\polar_coordinates.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\projection.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\quaternion.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\raw_data.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\rotate_normalized_axis.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\rotate_vector.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\scalar_relational.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\spline.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\std_based_type.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\string_cast.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\texture.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\transform.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\transform2.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\type_aligned.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\type_trait.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\vector_angle.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\vector_query.inl" />
+    <None Include="$(MSBuildThisFileDirectory)glm\gtx\wrap.inl" />
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_02.mtl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_03.mtl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\MarsPlanet.mtl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_01.mtl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_01.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\MarsPlanet.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_02.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </Resource>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\Objects\brian_03.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </Resource>
+  </ItemGroup>
+</Project>

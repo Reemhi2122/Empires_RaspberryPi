@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{bdbe08a2-0131-41b5-a3f7-ab5b12de8777}</ProjectGuid>
+    <RootNamespace>EmpiresWindows</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+    <Import Project="..\Shared\Shared.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)PyBullet\src;$(ProjectDir)GLFW\include;$(ProjectDir)..\Shared\GLAD\include;$(ProjectDir)..\Shared\Headers;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)PyBullet\lib;$(ProjectDir)GLFW\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)PyBullet\src;$(ProjectDir)GLFW\include;$(ProjectDir)..\Shared\GLAD\include;$(ProjectDir)..\Shared\Headers;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)PyBullet\lib\Release;$(ProjectDir)GLFW\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;$(ProjectDir)PyBullet\lib\BulletDynamics_vs2010_x64_debug.lib;$(ProjectDir)PyBullet\lib\BulletCollision_vs2010_x64_debug.lib;$(ProjectDir)PyBullet\lib\LinearMath_vs2010_x64_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;BulletDynamics_vs2010_x64_release.lib;BulletCollision_vs2010_x64_release.lib;LinearMath_vs2010_x64_release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaders\debugshader.frag" />
+    <None Include="Resources\Shaders\debugshader.vert" />
+    <None Include="Resources\Shaders\defaultshader.frag" />
+    <None Include="Resources\Shaders\defaultshader.vert" />
+    <None Include="Resources\Shaders\fragmentshader.frag" />
+    <None Include="Resources\Shaders\modelshader.frag" />
+    <None Include="Resources\Shaders\modelshader.vert" />
+    <None Include="Resources\Shaders\proceduralshader.frag" />
+    <None Include="Resources\Shaders\proceduralshader.vert" />
+    <None Include="Resources\Shaders\vertexshader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_02.mtl">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_02.obj">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_03.mtl">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_03.obj">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\MarsPlanet.mtl">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\MarsPlanet.obj">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\Mars_2K.mtl">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\Mars_2K.obj">
+      <FileType>Document</FileType>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

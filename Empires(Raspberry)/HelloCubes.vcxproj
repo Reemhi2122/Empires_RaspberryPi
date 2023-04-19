@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7f2fe357-d184-4b88-8117-e2f1de2262aa}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>HelloCubes</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Raspberry</TargetLinuxPlatform>
+    <LinuxProjectType>{8748239F-558C-44D1-944B-07B09C35B330}</LinuxProjectType>
+    <ProjectName>Empires</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared">
+    <Import Project="..\Shared\Shared.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>/home/pi/glm;/usr/include;/usr/include/x11;/usr/include/arm-linux-gnueabihf/c++/8;.;./Resources;./Headers;/usr/include/bullet;$(IncludePath)</IncludePath>
+    <LibraryPath>/usr/lib;/usr/lib/arm-linux-gnueabihf;$(LibraryPath)</LibraryPath>
+    <MultiProcNumber>4</MultiProcNumber>
+    <SourcePath>.;$(SourcePath)</SourcePath>
+    <RemotePostBuildEventUseInBuild>false</RemotePostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <IncludePath>/home/pi/glm;/usr/include;/usr/include/x11;/usr/include/arm-linux-gnueabihf/c++/8;.;./Resources;./Headers;/usr/include/bullet;$(IncludePath)</IncludePath>
+    <LibraryPath>/usr/lib;/usr/lib/arm-linux-gnueabihf;$(LibraryPath)</LibraryPath>
+    <SourcePath>.;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Link>
+      <LibraryDependencies>GLESv2;EGL;pthread;X11;Xrandr;BulletCollision;BulletSoftBody;BulletDynamics;LinearMath</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Link>
+      <LibraryDependencies>GLESv2;EGL;pthread;X11;Xrandr;BulletCollision;BulletSoftBody;BulletDynamics;LinearMath</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>gpio export 17 out</Command>
+      <Message>export pin 17 using the gpio utility so that we can execute the blink program without sudo</Message>
+    </RemotePostBuildEvent>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Shared\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);_RASPARM;_RASPARM</PreprocessorDefinitions>
+    </ClCompile>
+    <RemotePreBuildEvent>
+      <Command>sudo apt-get install libbullet.dev &amp;&amp; sudo apt-get install libgles2-mesa-dev -y &amp;&amp; sudo apt-get install libxrandr-dev -y</Command>
+    </RemotePreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="HelloCubes.cpp" />
+    <ClCompile Include="Source\Graphics.cpp" />
+    <ClCompile Include="Source\Input.cpp" />
+    <ClCompile Include="Source\utilities\XInput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\Graphics.h" />
+    <ClInclude Include="Headers\Input.h" />
+    <ClInclude Include="Headers\utilities\XInput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Readme\team24libs.sh" />
+    <None Include="Resources\Shaders\debugshader.frag" />
+    <None Include="Resources\Shaders\debugshader.vert" />
+    <None Include="Resources\Shaders\defaultshader.frag" />
+    <None Include="Resources\Shaders\defaultshader.vert" />
+    <None Include="Resources\Shaders\fragmentshader.frag" />
+    <None Include="Resources\Shaders\modelshader.frag" />
+    <None Include="Resources\Shaders\modelshader.vert" />
+    <None Include="Resources\Shaders\vertexshader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_01.mtl">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_01.obj">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_02.mtl">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_02.obj">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_03.mtl">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\brian_03.obj">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\MarsPlanet.mtl">
+      <FileType>Document</FileType>
+    </Resource>
+    <Resource Update="D:\BUAS\Perforce\Projects2\Y2020C-Y1-PR-Team24\Shared\Resources\Objects\MarsPlanet.obj">
+      <FileType>Document</FileType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Readme\Readme.txt" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>DEBUG=1;GLM_ENABLE_EXPERIMENTAL;BULLET;GLES3;_RASPARM;_RASPARM</PreprocessorDefinitions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Shared\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <RemotePreBuildEvent>
+      <Command>sudo apt-get install libbullet.dev &amp;&amp; sudo apt-get install libgles2-mesa-dev -y &amp;&amp; sudo apt-get install libxrandr-dev -y</Command>
+      <AdditionalSourcesToCopyMapping>%(AdditionalSourcesToCopyMapping)</AdditionalSourcesToCopyMapping>
+    </RemotePreBuildEvent>
+    <RemotePreLinkEvent>
+      <Command>
+      </Command>
+    </RemotePreLinkEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
